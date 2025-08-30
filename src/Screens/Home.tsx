@@ -8,12 +8,28 @@ const HomeScreen = () => {
   const handlePress = useCallback(() => {
     navigation.navigate('Screen2');
   }, []);
-  const handlePress2 = useCallback(() => {
-    navigation.navigate('Child1', {
+  const openMiniApp1 = useCallback(() => {
+    navigation.navigate('MiniApp1', {
       color: 'green',
       isFromSuperApp: true,
       index: 1,
       message: 'Jai Jai Shree Radhe',
+    });
+  }, []);
+  const openMiniApp2 = useCallback(() => {
+    navigation.navigate('MiniApp1', {
+      color: 'red',
+      isFromSuperApp: true,
+      index: 2,
+      message: 'Jai Jai Shree Ram',
+    });
+  }, []);
+  const openMiniApp3 = useCallback(() => {
+    navigation.navigate('MiniApp1', {
+      color: 'teal',
+      isFromSuperApp: true,
+      index: 3,
+      message: 'Jai Shree Krishna',
     });
   }, []);
 
@@ -26,9 +42,13 @@ const HomeScreen = () => {
         gap: 20,
       }}
     >
-      <Text>Home</Text>
+      <Text style={{ fontSize: 28, fontWeight: 'bold' }}>Home</Text>
       <Button onPress={handlePress} title="Press Me" />
-      <Button onPress={handlePress2} title="Child App 1" />
+      <View style={{ flexDirection: 'row', gap: 15 }}>
+        <Button onPress={openMiniApp1} title="Mini App 1" color={'green'} />
+        <Button onPress={openMiniApp2} title="Mini App 2" color={'red'} />
+        <Button onPress={openMiniApp3} title="Mini App 3" color={'teal'} />
+      </View>
     </View>
   );
 };

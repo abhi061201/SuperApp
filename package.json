@@ -17,6 +17,8 @@
     "react-native": "0.81.1",
     "react-native-safe-area-context": "^5.6.1",
     "react-native-screens": "^4.15.4",
+    "rn-first-mini-app": "^0.0.2",
+    "rn-second-mini-app": "^0.0.1",
     "rn-third-app-superapp": "^0.0.3"
   },
   "devDependencies": {
