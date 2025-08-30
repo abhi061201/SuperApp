@@ -9,7 +9,12 @@ const HomeScreen = () => {
     navigation.navigate('Screen2');
   }, []);
   const handlePress2 = useCallback(() => {
-    navigation.navigate('Child1', { color: 'red', isFromSuperApp: true });
+    navigation.navigate('Child1', {
+      color: 'green',
+      isFromSuperApp: true,
+      index: 1,
+      message: 'Jai Jai Shree Radhe',
+    });
   }, []);
 
   return (
