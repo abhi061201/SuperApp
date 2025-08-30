@@ -1,4 +1,4 @@
-import { Button, StyleSheet, Text, View } from 'react-native';
+import { Button, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import React, { useCallback } from 'react';
 import { useNavigation } from '@react-navigation/native';
 import Header from '../component/Header';
@@ -9,7 +9,7 @@ const HomeScreen = () => {
     navigation.navigate('Screen2');
   }, []);
   const openMiniApp1 = useCallback(() => {
-    navigation.navigate('MiniApp1', {
+    navigation.navigate('CarApp', {
       color: 'green',
       isFromSuperApp: true,
       index: 1,
@@ -17,7 +17,7 @@ const HomeScreen = () => {
     });
   }, []);
   const openMiniApp2 = useCallback(() => {
-    navigation.navigate('MiniApp2', {
+    navigation.navigate('FoodApp', {
       color: 'red',
       isFromSuperApp: true,
       index: 2,
@@ -25,7 +25,7 @@ const HomeScreen = () => {
     });
   }, []);
   const openMiniApp3 = useCallback(() => {
-    navigation.navigate('MiniApp3', {
+    navigation.navigate('MobileApp', {
       color: 'teal',
       isFromSuperApp: true,
       index: 3,
@@ -42,12 +42,45 @@ const HomeScreen = () => {
         gap: 20,
       }}
     >
-      <Text style={{ fontSize: 28, fontWeight: 'bold' }}>Home</Text>
-      <Button onPress={handlePress} title="Press Me" />
+      <Text style={{ fontSize: 28, fontWeight: 'bold' }}>Home Screen</Text>
+      <Button onPress={handlePress} title="Press" />
       <View style={{ flexDirection: 'row', gap: 15 }}>
-        <Button onPress={openMiniApp1} title="Mini App 1" color={'green'} />
-        <Button onPress={openMiniApp2} title="Mini App 2" color={'red'} />
-        <Button onPress={openMiniApp3} title="Mini App 3" color={'teal'} />
+        <TouchableOpacity
+          onPress={openMiniApp1}
+          style={{
+            backgroundColor: 'green',
+            justifyContent: 'center',
+            alignItems: 'center',
+            padding: 10,
+            borderRadius: 7,
+          }}
+        >
+          <Text style={{ color: 'white', fontWeight: '600' }}>Car App</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={openMiniApp2}
+          style={{
+            backgroundColor: 'red',
+            justifyContent: 'center',
+            alignItems: 'center',
+            padding: 10,
+            borderRadius: 7,
+          }}
+        >
+          <Text style={{ color: 'white', fontWeight: '600' }}>Mobile App</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={openMiniApp3}
+          style={{
+            backgroundColor: 'teal',
+            justifyContent: 'center',
+            alignItems: 'center',
+            padding: 10,
+            borderRadius: 7,
+          }}
+        >
+          <Text style={{ color: 'white', fontWeight: '600' }}>Food App</Text>
+        </TouchableOpacity>
       </View>
     </View>
   );
