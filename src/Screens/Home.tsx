@@ -17,7 +17,7 @@ const HomeScreen = () => {
     });
   }, []);
   const openMiniApp2 = useCallback(() => {
-    navigation.navigate('MiniApp1', {
+    navigation.navigate('MiniApp2', {
       color: 'red',
       isFromSuperApp: true,
       index: 2,
@@ -25,7 +25,7 @@ const HomeScreen = () => {
     });
   }, []);
   const openMiniApp3 = useCallback(() => {
-    navigation.navigate('MiniApp1', {
+    navigation.navigate('MiniApp3', {
       color: 'teal',
       isFromSuperApp: true,
       index: 3,
