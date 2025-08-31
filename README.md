@@ -1,4 +1,4 @@
-# 🚀 SuperApp with Mini Apps in React Native
+# SuperApp with Mini Apps in React Native
 
 This is a **Proof of Concept (POC)** showing how to integrate multiple **mini apps** inside a **SuperApp** using React Native.  
 
